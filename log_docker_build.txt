@@ -1,0 +1,701 @@
+Sending build context to Docker daemon  3.584kB
+Step 1/7 : FROM moubarakzoure/judo:v0
+ ---> 4d51dc1c1e2c
+Step 2/7 : USER root
+ ---> Running in daa0d03f0c62
+Removing intermediate container daa0d03f0c62
+ ---> a33e445ba138
+Step 3/7 : RUN  apt-get update -y &&  apt-get upgrade -y && apt-get update -y
+ ---> Running in 01f9c9467d22
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [1,324 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1,404 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [880 kB]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [27.5 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,169 kB]
+Get:10 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1,973 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [30.3 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2,407 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [27.1 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [54.2 kB]
+Fetched 9,633 kB in 7s (1,389 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  apt ca-certificates dpkg dpkg-dev e2fsprogs ffmpeg libapt-pkg6.0
+  libavcodec58 libavdevice58 libavfilter7 libavformat58 libavresample4
+  libavutil56 libcom-err2 libcups2 libdpkg-perl libext2fs2 libkeyutils1
+  libpostproc55 libss2 libswresample3 libswscale5 linux-libc-dev logsave
+24 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 15.5 MB of archives.
+After this operation, 68.6 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 dpkg amd64 1.19.7ubuntu3.2 [1,128 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libapt-pkg6.0 amd64 2.0.9 [839 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 apt amd64 2.0.9 [1,294 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 logsave amd64 1.45.5-2ubuntu1.1 [10.2 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libext2fs2 amd64 1.45.5-2ubuntu1.1 [183 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 e2fsprogs amd64 1.45.5-2ubuntu1.1 [527 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcom-err2 amd64 1.45.5-2ubuntu1.1 [9,548 B]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libss2 amd64 1.45.5-2ubuntu1.1 [11.3 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ca-certificates all 20211016~20.04.1 [144 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libkeyutils1 amd64 1.6-6ubuntu1.1 [10.3 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 dpkg-dev all 1.19.7ubuntu3.2 [679 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libdpkg-perl all 1.19.7ubuntu3.2 [231 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 ffmpeg amd64 7:4.2.7-0ubuntu0.1 [1,453 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libavdevice58 amd64 7:4.2.7-0ubuntu0.1 [74.3 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libavfilter7 amd64 7:4.2.7-0ubuntu0.1 [1,085 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libswscale5 amd64 7:4.2.7-0ubuntu0.1 [157 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libavformat58 amd64 7:4.2.7-0ubuntu0.1 [985 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libavcodec58 amd64 7:4.2.7-0ubuntu0.1 [4,878 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libswresample3 amd64 7:4.2.7-0ubuntu0.1 [57.1 kB]
+Get:20 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libpostproc55 amd64 7:4.2.7-0ubuntu0.1 [55.0 kB]
+Get:21 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libavresample4 amd64 7:4.2.7-0ubuntu0.1 [54.2 kB]
+Get:22 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libavutil56 amd64 7:4.2.7-0ubuntu0.1 [241 kB]
+Get:23 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcups2 amd64 2.3.1-9ubuntu1.2 [233 kB]
+Get:24 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-libc-dev amd64 5.4.0-120.136 [1,113 kB]
+[91mdebconf: delaying package configuration, since apt-utils is not installed
+[0mFetched 15.5 MB in 8s (1,917 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 60663 files and directories currently installed.)
+Preparing to unpack .../dpkg_1.19.7ubuntu3.2_amd64.deb ...
+Unpacking dpkg (1.19.7ubuntu3.2) over (1.19.7ubuntu3) ...
+Setting up dpkg (1.19.7ubuntu3.2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 60663 files and directories currently installed.)
+Preparing to unpack .../libapt-pkg6.0_2.0.9_amd64.deb ...
+Unpacking libapt-pkg6.0:amd64 (2.0.9) over (2.0.8) ...
+Setting up libapt-pkg6.0:amd64 (2.0.9) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 60663 files and directories currently installed.)
+Preparing to unpack .../archives/apt_2.0.9_amd64.deb ...
+Unpacking apt (2.0.9) over (2.0.8) ...
+Setting up apt (2.0.9) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 60663 files and directories currently installed.)
+Preparing to unpack .../logsave_1.45.5-2ubuntu1.1_amd64.deb ...
+Unpacking logsave (1.45.5-2ubuntu1.1) over (1.45.5-2ubuntu1) ...
+Preparing to unpack .../libext2fs2_1.45.5-2ubuntu1.1_amd64.deb ...
+Unpacking libext2fs2:amd64 (1.45.5-2ubuntu1.1) over (1.45.5-2ubuntu1) ...
+Setting up libext2fs2:amd64 (1.45.5-2ubuntu1.1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 60663 files and directories currently installed.)
+Preparing to unpack .../00-e2fsprogs_1.45.5-2ubuntu1.1_amd64.deb ...
+Unpacking e2fsprogs (1.45.5-2ubuntu1.1) over (1.45.5-2ubuntu1) ...
+Preparing to unpack .../01-libcom-err2_1.45.5-2ubuntu1.1_amd64.deb ...
+Unpacking libcom-err2:amd64 (1.45.5-2ubuntu1.1) over (1.45.5-2ubuntu1) ...
+Preparing to unpack .../02-libss2_1.45.5-2ubuntu1.1_amd64.deb ...
+Unpacking libss2:amd64 (1.45.5-2ubuntu1.1) over (1.45.5-2ubuntu1) ...
+Preparing to unpack .../03-ca-certificates_20211016~20.04.1_all.deb ...
+Unpacking ca-certificates (20211016~20.04.1) over (20210119~20.04.2) ...
+Preparing to unpack .../04-libkeyutils1_1.6-6ubuntu1.1_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6-6ubuntu1.1) over (1.6-6ubuntu1) ...
+Preparing to unpack .../05-dpkg-dev_1.19.7ubuntu3.2_all.deb ...
+Unpacking dpkg-dev (1.19.7ubuntu3.2) over (1.19.7ubuntu3) ...
+Preparing to unpack .../06-libdpkg-perl_1.19.7ubuntu3.2_all.deb ...
+Unpacking libdpkg-perl (1.19.7ubuntu3.2) over (1.19.7ubuntu3) ...
+Preparing to unpack .../07-ffmpeg_7%3a4.2.7-0ubuntu0.1_amd64.deb ...
+Unpacking ffmpeg (7:4.2.7-0ubuntu0.1) over (7:4.2.4-1ubuntu0.1) ...
+Preparing to unpack .../08-libavdevice58_7%3a4.2.7-0ubuntu0.1_amd64.deb ...
+Unpacking libavdevice58:amd64 (7:4.2.7-0ubuntu0.1) over (7:4.2.4-1ubuntu0.1) ...
+Preparing to unpack .../09-libavfilter7_7%3a4.2.7-0ubuntu0.1_amd64.deb ...
+Unpacking libavfilter7:amd64 (7:4.2.7-0ubuntu0.1) over (7:4.2.4-1ubuntu0.1) ...
+Preparing to unpack .../10-libswscale5_7%3a4.2.7-0ubuntu0.1_amd64.deb ...
+Unpacking libswscale5:amd64 (7:4.2.7-0ubuntu0.1) over (7:4.2.4-1ubuntu0.1) ...
+Preparing to unpack .../11-libavformat58_7%3a4.2.7-0ubuntu0.1_amd64.deb ...
+Unpacking libavformat58:amd64 (7:4.2.7-0ubuntu0.1) over (7:4.2.4-1ubuntu0.1) ...
+Preparing to unpack .../12-libavcodec58_7%3a4.2.7-0ubuntu0.1_amd64.deb ...
+Unpacking libavcodec58:amd64 (7:4.2.7-0ubuntu0.1) over (7:4.2.4-1ubuntu0.1) ...
+Preparing to unpack .../13-libswresample3_7%3a4.2.7-0ubuntu0.1_amd64.deb ...
+Unpacking libswresample3:amd64 (7:4.2.7-0ubuntu0.1) over (7:4.2.4-1ubuntu0.1) ...
+Preparing to unpack .../14-libpostproc55_7%3a4.2.7-0ubuntu0.1_amd64.deb ...
+Unpacking libpostproc55:amd64 (7:4.2.7-0ubuntu0.1) over (7:4.2.4-1ubuntu0.1) ...
+Preparing to unpack .../15-libavresample4_7%3a4.2.7-0ubuntu0.1_amd64.deb ...
+Unpacking libavresample4:amd64 (7:4.2.7-0ubuntu0.1) over (7:4.2.4-1ubuntu0.1) ...
+Preparing to unpack .../16-libavutil56_7%3a4.2.7-0ubuntu0.1_amd64.deb ...
+Unpacking libavutil56:amd64 (7:4.2.7-0ubuntu0.1) over (7:4.2.4-1ubuntu0.1) ...
+Preparing to unpack .../17-libcups2_2.3.1-9ubuntu1.2_amd64.deb ...
+Unpacking libcups2:amd64 (2.3.1-9ubuntu1.2) over (2.3.1-9ubuntu1.1) ...
+Preparing to unpack .../18-linux-libc-dev_5.4.0-120.136_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (5.4.0-120.136) over (5.4.0-110.124) ...
+Setting up libkeyutils1:amd64 (1.6-6ubuntu1.1) ...
+Setting up linux-libc-dev:amd64 (5.4.0-120.136) ...
+Setting up libcom-err2:amd64 (1.45.5-2ubuntu1.1) ...
+Setting up libavutil56:amd64 (7:4.2.7-0ubuntu0.1) ...
+Setting up ca-certificates (20211016~20.04.1) ...
+Updating certificates in /etc/ssl/certs...
+rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+7 added, 8 removed; done.
+Setting up libss2:amd64 (1.45.5-2ubuntu1.1) ...
+Setting up libpostproc55:amd64 (7:4.2.7-0ubuntu0.1) ...
+Setting up libdpkg-perl (1.19.7ubuntu3.2) ...
+Setting up logsave (1.45.5-2ubuntu1.1) ...
+Setting up libcups2:amd64 (2.3.1-9ubuntu1.2) ...
+Setting up libswscale5:amd64 (7:4.2.7-0ubuntu0.1) ...
+Setting up e2fsprogs (1.45.5-2ubuntu1.1) ...
+Setting up libswresample3:amd64 (7:4.2.7-0ubuntu0.1) ...
+Setting up libavresample4:amd64 (7:4.2.7-0ubuntu0.1) ...
+Setting up dpkg-dev (1.19.7ubuntu3.2) ...
+Setting up libavcodec58:amd64 (7:4.2.7-0ubuntu0.1) ...
+Setting up libavformat58:amd64 (7:4.2.7-0ubuntu0.1) ...
+Setting up libavfilter7:amd64 (7:4.2.7-0ubuntu0.1) ...
+Setting up libavdevice58:amd64 (7:4.2.7-0ubuntu0.1) ...
+Setting up ffmpeg (7:4.2.7-0ubuntu0.1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Processing triggers for ca-certificates (20211016~20.04.1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Reading package lists...
+Removing intermediate container 01f9c9467d22
+ ---> 3aac72af09c2
+Step 4/7 : RUN apt-get install apt-utils -y
+ ---> Running in 88968c3770cd
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  apt-utils
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 213 kB of archives.
+After this operation, 856 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 apt-utils amd64 2.0.9 [213 kB]
+[91mdebconf: delaying package configuration, since apt-utils is not installed
+[0mFetched 213 kB in 1s (267 kB/s)
+Selecting previously unselected package apt-utils.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 60662 files and directories currently installed.)
+Preparing to unpack .../apt-utils_2.0.9_amd64.deb ...
+Unpacking apt-utils (2.0.9) ...
+Setting up apt-utils (2.0.9) ...
+Removing intermediate container 88968c3770cd
+ ---> c98e09fda01a
+Step 5/7 : USER jovyan
+ ---> Running in fc66d7a95666
+Removing intermediate container fc66d7a95666
+ ---> c6bb2a33389e
+Step 6/7 : RUN conda update -n base conda
+ ---> Running in 1960ad252cfe
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... [91m
+The environment is inconsistent, please check the package plan carefully
+The following packages are causing the inconsistency:
+[0m[91m
+  - conda-forge/linux-64::greenlet==1.1.2=py39h5a03fae_2
+  - conda-forge/noarch::pycparser==2.21=pyhd8ed1ab_0
+  - conda-forge/noarch::jupyter_server==1.17.0=pyhd8ed1ab_0
+  - conda-forge/noarch::mako==1.2.0=pyhd8ed1ab_1
+  - conda-forge/noarch::importlib_resources==5.7.1=pyhd8ed1ab_0
+  - conda-forge/noarch::urllib3==1.26.9=pyhd8ed1ab_0
+  - conda-forge/linux-64::markupsafe==2.1.1=py39hb9d737c_1
+  - conda-forge/linux-64::sqlite==3.38.5=h4ff8645_0
+  - conda-forge/noarch::defusedxml==0.7.1=pyhd8ed1ab_0
+  - conda-forge/noarch::nbformat==5.4.0=pyhd8ed1ab_0
+  - conda-forge/noarch::asttokens==2.0.5=pyhd8ed1ab_0
+  - conda-forge/linux-64::mistune==0.8.4=py39h3811e60_1005
+  - conda-forge/noarch::jupyterhub-base==2.3.0=pyhd8ed1ab_0
+  - conda-forge/noarch::nbconvert==6.5.0=pyhd8ed1ab_0
+  - conda-forge/linux-64::setuptools==62.2.0=py39hf3d152e_0
+  - conda-forge/linux-64::ruamel.yaml.clib==0.2.6=py39hb9d737c_1
+  - conda-forge/noarch::pamela==1.0.0=py_0
+  - conda-forge/linux-64::pycosat==0.6.3=py39hb9d737c_1010
+  - conda-forge/noarch::requests==2.27.1=pyhd8ed1ab_0
+  - conda-forge/noarch::executing==0.8.3=pyhd8ed1ab_0
+  - conda-forge/noarch::charset-normalizer==2.0.12=pyhd8ed1ab_0
+  - conda-forge/linux-64::certifi==2021.10.8=py39hf3d152e_2
+  - conda-forge/noarch::nbclassic==0.3.7=pyhd8ed1ab_0
+  - conda-forge/noarch::backcall==0.2.0=pyh9f0ad1d_0
+  - conda-forge/noarch::packaging==21.3=pyhd8ed1ab_0
+  - conda-forge/noarch::jupyterhub==2.3.0=pyhd8ed1ab_0
+  - conda-forge/linux-64::sniffio==1.2.0=py39hf3d152e_3
+  - conda-forge/linux-64::importlib-metadata==4.11.3=py39hf3d152e_1
+  - conda-forge/noarch::websocket-client==1.3.2=pyhd8ed1ab_0
+  - conda-forge/noarch::pyjwt==2.3.0=pyhd8ed1ab_1
+  - conda-forge/linux-64::ruamel_yaml==0.15.80=py39h3811e60_1006
+  - conda-forge/linux-64::ipython==8.3.0=py39hf3d152e_0
+  - conda-forge/noarch::prompt-toolkit==3.0.29=pyha770c72_0
+  - conda-forge/noarch::pip==22.1=pyhd8ed1ab_0
+  - conda-forge/linux-64::jupyter_core==4.9.2=py39hf3d152e_0
+  - conda-forge/noarch::stack_data==0.2.0=pyhd8ed1ab_0
+  - conda-forge/linux-64::psutil==5.9.0=py39hb9d737c_1
+  - conda-forge/noarch::send2trash==1.8.0=pyhd8ed1ab_0
+  - conda-forge/linux-64::tornado==6.1=py39hb9d737c_3
+  - conda-forge/linux-64::python==3.9.12=h9a8a25e_1_cpython
+  - conda-forge/noarch::alembic==1.7.7=pyhd8ed1ab_0
+  - conda-forge/noarch::jsonschema==4.5.1=pyhd8ed1ab_0
+  - conda-forge/noarch::wheel==0.37.1=pyhd8ed1ab_0
+  - conda-forge/noarch::traitlets==5.2.0=pyhd8ed1ab_0
+  - conda-forge/linux-64::ruamel.yaml==0.17.21=py39hb9d737c_1
+  - conda-forge/linux-64::conda==4.12.0=py39hf3d152e_0
+  - conda-forge/noarch::notebook-shim==0.1.0=pyhd8ed1ab_0
+  - conda-forge/noarch::wcwidth==0.2.5=pyh9f0ad1d_2
+  - conda-forge/linux-64::pyrsistent==0.18.1=py39hb9d737c_1
+  - conda-forge/noarch::pandocfilters==1.5.0=pyhd8ed1ab_0
+  - conda-forge/noarch::async_generator==1.10=py_0
+  - conda-forge/noarch::bleach==5.0.0=pyhd8ed1ab_0
+  - conda-forge/noarch::flit-core==3.7.1=pyhd8ed1ab_0
+  - conda-forge/linux-64::python_abi==3.9=2_cp39
+  - conda-forge/noarch::jupyterlab_server==2.13.0=pyhd8ed1ab_1
+  - conda-forge/noarch::json5==0.9.5=pyh9f0ad1d_0
+  - conda-forge/noarch::nbconvert-core==6.5.0=pyhd8ed1ab_0
+  - conda-forge/noarch::babel==2.10.1=pyhd8ed1ab_0
+  - conda-forge/linux-64::cffi==1.15.0=py39h4bc2ebd_0
+  - conda-forge/linux-64::terminado==0.13.3=py39hf3d152e_1
+  - conda-forge/noarch::backports==1.0=py_2
+  - conda-forge/noarch::attrs==21.4.0=pyhd8ed1ab_0
+  - conda-forge/noarch::idna==3.3=pyhd8ed1ab_0
+  - conda-forge/noarch::jupyter_client==7.3.1=pyhd8ed1ab_0
+  - conda-forge/linux-64::argon2-cffi-bindings==21.2.0=py39hb9d737c_2
+  - conda-forge/noarch::parso==0.8.3=pyhd8ed1ab_0
+  - conda-forge/noarch::prometheus_client==0.14.1=pyhd8ed1ab_0
+  - conda-forge/linux-64::jedi==0.18.1=py39hf3d152e_1
+  - conda-forge/noarch::decorator==5.1.1=pyhd8ed1ab_0
+  - conda-forge/noarch::pytz==2022.1=pyhd8ed1ab_0
+  - conda-forge/noarch::certipy==0.1.3=py_0
+  - conda-forge/linux-64::brotlipy==0.7.0=py39hb9d737c_1004
+  - conda-forge/linux-64::pyzmq==22.3.0=py39headdf64_2
+  - conda-forge/noarch::jupyterlab_pygments==0.2.2=pyhd8ed1ab_0
+  - conda-forge/noarch::jinja2==3.1.2=pyhd8ed1ab_0
+  - conda-forge/noarch::python-dateutil==2.8.2=pyhd8ed1ab_0
+  - conda-forge/noarch::blinker==1.4=py_1
+  - conda-forge/noarch::argon2-cffi==21.3.0=pyhd8ed1ab_0
+  - conda-forge/linux-64::cryptography==36.0.2=py39hd97740a_1
+  - conda-forge/noarch::colorama==0.4.4=pyh9f0ad1d_0
+  - conda-forge/noarch::nest-asyncio==1.5.5=pyhd8ed1ab_0
+  - conda-forge/noarch::zipp==3.8.0=pyhd8ed1ab_0
+  - conda-forge/noarch::pexpect==4.8.0=pyh9f0ad1d_2
+  - conda-forge/noarch::pyopenssl==22.0.0=pyhd8ed1ab_0
+  - conda-forge/noarch::pygments==2.12.0=pyhd8ed1ab_0
+  - conda-forge/linux-64::mamba==0.23.1=py39hfa8f2c8_1
+  - conda-forge/noarch::entrypoints==0.4=pyhd8ed1ab_0
+  - conda-forge/noarch::nbclient==0.6.3=pyhd8ed1ab_0
+  - conda-forge/noarch::beautifulsoup4==4.11.1=pyha770c72_0
+  - conda-forge/noarch::jupyter_telemetry==0.1.0=pyhd8ed1ab_1
+  - conda-forge/linux-64::sqlalchemy==1.4.36=py39hb9d737c_0
+  - conda-forge/noarch::tinycss2==1.1.1=pyhd8ed1ab_0
+  - conda-forge/linux-64::pysocks==1.7.1=py39hf3d152e_5
+  - conda-forge/linux-64::debugpy==1.6.0=py39h5a03fae_0
+  - conda-forge/noarch::pickleshare==0.7.5=py_1003
+  - conda-forge/noarch::webencodings==0.5.1=py_1
+  - conda-forge/noarch::ptyprocess==0.7.0=pyhd3deb0d_0
+  - conda-forge/noarch::python-fastjsonschema==2.15.3=pyhd8ed1ab_0
+  - conda-forge/noarch::backports.functools_lru_cache==1.6.4=pyhd8ed1ab_0
+  - conda-forge/noarch::oauthlib==3.2.0=pyhd8ed1ab_0
+  - conda-forge/noarch::notebook==6.4.11=pyha770c72_0
+  - conda-forge/noarch::matplotlib-inline==0.1.3=pyhd8ed1ab_0
+  - conda-forge/noarch::ipython_genutils==0.2.0=py_1
+  - conda-forge/noarch::nbconvert-pandoc==6.5.0=pyhd8ed1ab_0
+  - conda-forge/linux-64::readline==8.1=h46c0cb4_0
+  - conda-forge/noarch::pyparsing==3.0.9=pyhd8ed1ab_0
+  - conda-forge/noarch::jupyterlab==3.4.0=pyhd8ed1ab_0
+  - conda-forge/linux-64::anyio==3.5.0=py39hf3d152e_0
+  - conda-forge/noarch::soupsieve==2.3.1=pyhd8ed1ab_0
+  - conda-forge/noarch::python-json-logger==2.0.1=pyh9f0ad1d_0
+  - conda-forge/noarch::pure_eval==0.2.2=pyhd8ed1ab_0
+  - conda-forge/linux-64::pycurl==7.45.1=py39hd73adbb_1
+  - conda-forge/linux-64::conda-package-handling==1.8.1=py39hb9d737c_1
+  - conda-forge/noarch::six==1.16.0=pyh6c4a22f_0
+  - conda-forge/linux-64::ipykernel==6.13.0=py39hef51801_0
+  - conda-forge/noarch::tqdm==4.64.0=pyhd8ed1ab_0
+  - conda-forge/linux-64::libmambapy==0.23.1=py39hd55135b_1
+  - conda-forge/noarch::importlib_metadata==4.11.3=hd8ed1ab_1
+  - conda-forge/linux-64::r-lhs==1.1.5=r41h7525677_0
+  - conda-forge/noarch::r-patchwork==1.1.1=r41hc72bb7e_0
+  - conda-forge/noarch::r-gpfit==1.0_8=r41hc72bb7e_1
+  - conda-forge/linux-64::r-yardstick==0.0.9=r41h03ef668_0
+  - conda-forge/noarch::r-infer==1.0.0=r41hc72bb7e_0
+  - conda-forge/noarch::r-tune==0.2.0=r41hc72bb7e_0
+  - conda-forge/noarch::r-parsnip==0.2.1=r41hc72bb7e_0
+  - conda-forge/noarch::r-workflowsets==0.2.1=r41hc72bb7e_0
+  - conda-forge/noarch::r-rsample==0.1.1=r41hc72bb7e_0
+  - conda-forge/noarch::r-furrr==0.3.0=r41hc72bb7e_0
+  - conda-forge/noarch::r-dials==0.1.1=r41hc72bb7e_0
+  - conda-forge/noarch::r-tidymodels==0.2.0=r41hc72bb7e_0
+  - conda-forge/noarch::r-workflows==0.2.6=r41hc72bb7e_0
+  - conda-forge/linux-64::r-slider==0.2.2=r41hcfec24a_0
+  - conda-forge/linux-64::r-warp==0.2.0=r41hcfec24a_1
+  - conda-forge/linux-64::r-dicedesign==1.9=r41hcfec24a_0
+  - conda-forge/noarch::r-conflicted==1.1.0=r41hc72bb7e_0
+  - conda-forge/noarch::r-modeldata==0.1.1=r41hc72bb7e_0
+  - conda-forge/noarch::r-rstudioapi==0.13=r41hc72bb7e_0
+  - conda-forge/linux-64::r-later==1.2.0=r41h03ef668_0
+  - conda-forge/linux-64::r-backports==1.4.1=r41hcfec24a_0
+  - conda-forge/linux-64::r-lmtest==0.9_40=r41h8da6f51_0
+  - conda-forge/noarch::r-ggplot2==3.3.6=r41hc72bb7e_0
+  - conda-forge/linux-64::r-mass==7.3_57=r41h06615bd_0
+  - conda-forge/noarch::r-ini==0.3.1=r41hc72bb7e_1003
+  - conda-forge/linux-64::r-git2r==0.30.1=r41h96773ce_0
+  - conda-forge/linux-64::r-haven==2.4.3=r41h2713e49_0
+  - conda-forge/noarch::r-quantmod==0.4.20=r41hc72bb7e_0
+  - conda-forge/linux-64::r-data.table==1.14.2=r41hcfec24a_0
+  - conda-forge/noarch::r-crosstalk==1.2.0=r41hc72bb7e_0
+  - conda-forge/linux-64::r-proc==1.18.0=r41h03ef668_0
+  - conda-forge/linux-64::r-kernsmooth==2.23_20=r41h742201e_0
+  - conda-forge/noarch::r-blob==1.2.3=r41hc72bb7e_0
+  - conda-forge/linux-64::r-matrix==1.4_1=r41h0154571_0
+  - conda-forge/linux-64::r-openssl==2.0.0=r41hfaab4ff_0
+  - conda-forge/noarch::r-lava==1.6.10=r41hc72bb7e_0
+  - conda-forge/noarch::r-prettyunits==1.1.1=r41hc72bb7e_1
+  - conda-forge/linux-64::r-diffobj==0.3.5=r41hcfec24a_0
+  - conda-forge/noarch::r-forcats==0.5.1=r41hc72bb7e_0
+  - conda-forge/linux-64::r-proxy==0.4_26=r41hcfec24a_0
+  - conda-forge/linux-64::pytz-deprecation-shim==0.1.0.post0=py39hf3d152e_1
+  - conda-forge/noarch::r-recipes==0.2.0=r41hc72bb7e_0
+  - conda-forge/noarch::r-selectr==0.4_2=r41hc72bb7e_1
+  - conda-forge/noarch::r-irkernel==1.3=r41hc72bb7e_0
+  - conda-forge/noarch::r-reprex==2.0.1=r41hc72bb7e_0
+  - conda-forge/noarch::r-tinytex==0.38=r41hc72bb7e_0
+  - conda-forge/noarch::r-plogr==0.2.0=r41hc72bb7e_1003
+  - conda-forge/linux-64::r-tidyselect==1.1.2=r41hc72bb7e_0
+  - conda-forge/linux-64::r-zip==2.2.0=r41hcfec24a_0
+  - conda-forge/linux-64::r-mime==0.12=r41hcfec24a_0
+  - conda-forge/noarch::r-credentials==1.3.2=r41hc72bb7e_0
+  - conda-forge/linux-64::r-tibble==3.1.7=r41h06615bd_0
+  - conda-forge/linux-64::r-ellipsis==0.3.2=r41hcfec24a_0
+  - conda-forge/noarch::r-numderiv==2016.8_1.1=r41hc72bb7e_3
+  - conda-forge/noarch::r-modelr==0.1.8=r41hc72bb7e_0
+  - conda-forge/noarch::r-codetools==0.2_18=r41hc72bb7e_0
+  - conda-forge/noarch::r-bslib==0.3.1=r41hc72bb7e_0
+  - conda-forge/linux-64::r-commonmark==1.8.0=r41h06615bd_0
+  - conda-forge/linux-64::r-dplyr==1.0.9=r41h7525677_0
+  - conda-forge/noarch::r-repr==1.1.4=r41h785f33e_0
+  - conda-forge/linux-64::r-ttr==0.24.3=r41h06615bd_0
+  - conda-forge/noarch::r-clipr==0.8.0=r41hc72bb7e_0
+  - conda-forge/noarch::r-xopen==1.0.0=r41hc72bb7e_1003
+  - conda-forge/linux-64::r-vroom==1.5.7=r41h03ef668_0
+  - conda-forge/noarch::r-memoise==2.0.1=r41hc72bb7e_0
+  - conda-forge/noarch::r-xtable==1.8_4=r41hc72bb7e_3
+  - conda-forge/noarch::r-crayon==1.5.1=r41hc72bb7e_0
+  - conda-forge/linux-64::r-pbdzmq==0.3_7=r41h42bf92c_0
+  - conda-forge/noarch::r-sessioninfo==1.2.2=r41hc72bb7e_0
+  - conda-forge/linux-64::r-magrittr==2.0.3=r41h06615bd_0
+  - conda-forge/noarch::python-tzdata==2022.1=pyhd8ed1ab_0
+  - conda-forge/noarch::r-cpp11==0.4.2=r41hc72bb7e_0
+  - conda-forge/linux-64::r-base==4.1.3=h06d3f91_1
+  - conda-forge/noarch::r-cellranger==1.1.0=r41hc72bb7e_1004
+  - conda-forge/linux-64::r-roxygen2==7.2.0=r41h7525677_0
+  - conda-forge/linux-64::r-forecast==8.16=r41hcec875b_0
+  - conda-forge/linux-64::r-rpart==4.1.16=r41hcfec24a_0
+  - conda-forge/noarch::r-broom==0.8.0=r41hc72bb7e_0
+  - conda-forge/linux-64::r-pkgload==1.2.4=r41h03ef668_0
+  - conda-forge/noarch::r-parallelly==1.31.1=r41hc72bb7e_0
+  - conda-forge/linux-64::r-e1071==1.7_9=r41h03ef668_0
+  - conda-forge/linux-64::r-tzdb==0.3.0=r41h7525677_0
+  - conda-forge/linux-64::r-lubridate==1.8.0=r41h03ef668_0
+  - conda-forge/linux-64::r-randomforest==4.6_14=r41h859d828_1004
+  - conda-forge/linux-64::r-isoband==0.2.5=r41h03ef668_0
+  - conda-forge/linux-64::r-uuid==1.1_0=r41h06615bd_0
+  - conda-forge/linux-64::r-purrr==0.3.4=r41hcfec24a_1
+  - conda-forge/noarch::r-rex==1.2.1=r41hc72bb7e_0
+  - conda-forge/linux-64::r-cachem==1.0.6=r41hcfec24a_0
+  - conda-forge/noarch::r-shiny==1.7.1=r41h785f33e_0
+  - conda-forge/noarch::r-iterators==1.0.14=r41hc72bb7e_0
+  - conda-forge/linux-64::tzlocal==4.2=py39hf3d152e_0
+  - conda-forge/linux-64::r-lattice==0.20_45=r41hcfec24a_0
+  - conda-forge/noarch::r-pillar==1.7.0=r41hc72bb7e_0
+  - conda-forge/noarch::r-listenv==0.8.0=r41hc72bb7e_1
+  - conda-forge/noarch::r-brew==1.0_7=r41hc72bb7e_0
+  - conda-forge/linux-64::r-sys==3.4=r41hcfec24a_0
+  - conda-forge/linux-64::r-prodlim==2019.11.13=r41h03ef668_1
+  - conda-forge/noarch::r-knitr==1.39=r41hc72bb7e_0
+  - conda-forge/noarch::r-scales==1.2.0=r41hc72bb7e_0
+  - conda-forge/noarch::r-squarem==2021.1=r41hc72bb7e_0
+  - conda-forge/noarch::r-pkgconfig==2.0.3=r41hc72bb7e_1
+  - conda-forge/noarch::r-hardhat==0.2.0=r41hc72bb7e_0
+  - conda-forge/noarch::r-gh==1.3.0=r41hc72bb7e_0
+  - conda-forge/linux-64::r-urca==1.3_0=r41h8da6f51_1006
+  - conda-forge/linux-64::r-fs==1.5.2=r41h7525677_1
+  - conda-forge/noarch::simplegeneric==0.8.1=py_1
+  - conda-forge/linux-64::r-sourcetools==0.1.7=r41h03ef668_1002
+  - conda-forge/noarch::r-future==1.25.0=r41hc72bb7e_0
+  - conda-forge/noarch::r-callr==3.7.0=r41hc72bb7e_0
+  - conda-forge/linux-64::r-rsqlite==2.2.8=r41h03ef668_0
+  - conda-forge/linux-64::r-quadprog==1.5_8=r41h742201e_3
+  - conda-forge/linux-64::r-mgcv==1.8_40=r41h0154571_0
+  - conda-forge/noarch::r-gitcreds==0.1.1=r41hc72bb7e_0
+  - conda-forge/linux-64::r-gert==1.5.0=r41h30f61c7_1
+  - conda-forge/linux-64::r-fracdiff==1.5_1=r41hb699f27_1
+  - conda-forge/linux-64::r-modelmetrics==1.2.2.2=r41h03ef668_1
+  - conda-forge/linux-64::r-rlang==1.0.2=r41h7525677_0
+  - conda-forge/noarch::r-rematch2==2.1.2=r41hc72bb7e_1
+  - conda-forge/noarch::r-httr==1.4.3=r41hc72bb7e_0
+  - conda-forge/linux-64::r-ipred==0.9_12=r41hcfec24a_0
+  - conda-forge/linux-64::r-curl==4.3.2=r41hcfec24a_0
+  - conda-forge/linux-64::r-zoo==1.8_10=r41h06615bd_0
+  - conda-forge/noarch::r-r6==2.5.1=r41hc72bb7e_0
+  - conda-forge/noarch::r-gargle==1.2.0=r41hc72bb7e_0
+  - conda-forge/linux-64::r-brio==1.1.3=r41hcfec24a_0
+  - conda-forge/linux-64::r-jsonlite==1.8.0=r41h06615bd_0
+  - conda-forge/linux-64::r-httpuv==1.6.5=r41h03ef668_0
+  - conda-forge/noarch::r-pkgbuild==1.3.1=r41hc72bb7e_0
+  - conda-forge/linux-64::rpy2==3.5.1=py39r41hd257fcd_0
+  - conda-forge/noarch::r-viridislite==0.4.0=r41hc72bb7e_0
+  - conda-forge/linux-64::r-ps==1.7.0=r41h06615bd_0
+  - conda-forge/linux-64::r-readxl==1.4.0=r41hf23e330_0
+  - conda-forge/linux-64::r-htmltools==0.5.2=r41h03ef668_0
+  - conda-forge/noarch::r-rmarkdown==2.14=r41hc72bb7e_0
+  - conda-forge/linux-64::r-rcpp==1.0.8.3=r41h7525677_0
+  - conda-forge/noarch::r-progress==1.2.2=r41hc72bb7e_2
+  - conda-forge/linux-64::r-nlme==3.1_157=r41h8da6f51_0
+  - conda-forge/linux-64::r-bit64==4.0.5=r41hcfec24a_0
+  - conda-forge/noarch::r-rcmdcheck==1.4.0=r41h785f33e_0
+  - conda-forge/linux-64::r-hexbin==1.28.2=r41h8da6f51_0
+  - conda-forge/noarch::r-evaluate==0.15=r41hc72bb7e_0
+  - conda-forge/linux-64::r-bitops==1.0_7=r41hcfec24a_0
+  - conda-forge/noarch::r-whisker==0.4=r41hc72bb7e_1
+  - conda-forge/noarch::r-googledrive==2.0.0=r41hc72bb7e_0
+  - conda-forge/linux-64::r-fansi==1.0.3=r41h06615bd_0
+  - conda-forge/noarch::r-generics==0.1.2=r41hc72bb7e_0
+  - conda-forge/linux-64::r-sass==0.4.1=r41h7525677_0
+  - conda-forge/linux-64::r-class==7.3_20=r41hcfec24a_0
+  - conda-forge/linux-64::r-utf8==1.2.2=r41hcfec24a_0
+  - conda-forge/noarch::r-highr==0.9=r41hc72bb7e_0
+  - conda-forge/linux-64::r-colorspace==2.0_3=r41h06615bd_0
+  - conda-forge/noarch::r-praise==1.0.0=r41hc72bb7e_1005
+  - conda-forge/noarch::r-munsell==0.5.0=r41hc72bb7e_1004
+  - conda-forge/linux-64::r-yaml==2.3.5=r41h06615bd_0
+  - conda-forge/linux-64::r-xts==0.12.1=r41h06615bd_0
+  - conda-forge/noarch::r-irdisplay==1.1=r41hd8ed1ab_0
+  - conda-forge/noarch::r-dt==0.23=r41hc72bb7e_0
+  - conda-forge/linux-64::r-rcurl==1.98_1.6=r41hcfec24a_0
+  - conda-forge/noarch::r-waldo==0.4.0=r41hc72bb7e_0
+  - conda-forge/noarch::r-future.apply==1.9.0=r41hc72bb7e_0
+  - conda-forge/linux-64::r-readr==2.1.2=r41h03ef668_0
+  - conda-forge/noarch::r-ids==1.0.1=r41hc72bb7e_1
+  - conda-forge/noarch::r-tidyverse==1.3.1=r41hc72bb7e_0
+  - conda-forge/linux-64::r-glue==1.6.2=r41h06615bd_0
+  - conda-forge/noarch::r-nycflights13==1.0.2=r41hc72bb7e_0
+  - conda-forge/linux-64::r-processx==3.5.3=r41h06615bd_0
+  - conda-forge/linux-64::r-reshape2==1.4.4=r41h03ef668_1
+  - conda-forge/noarch::r-timedate==3043.102=r41hc72bb7e_1002
+  - conda-forge/linux-64::r-promises==1.2.0.1=r41h03ef668_0
+  - conda-forge/linux-64::r-rappdirs==0.3.3=r41hcfec24a_0
+  - conda-forge/noarch::r-jquerylib==0.1.4=r41hc72bb7e_0
+  - conda-forge/linux-64::r-covr==3.5.1=r41h03ef668_0
+  - conda-forge/noarch::r-fontawesome==0.2.2=r41hc72bb7e_0
+  - conda-forge/noarch::r-rprojroot==2.0.3=r41hc72bb7e_0
+  - conda-forge/noarch::r-foreach==1.5.2=r41hc72bb7e_0
+  - conda-forge/noarch::r-rvest==1.0.2=r41hc72bb7e_0
+  - conda-forge/noarch::r-desc==1.4.1=r41hc72bb7e_0
+  - conda-forge/linux-64::r-testthat==3.1.4=r41h7525677_0
+  - conda-forge/linux-64::r-plyr==1.8.7=r41h7525677_0
+  - conda-forge/noarch::r-globals==0.15.0=r41hc72bb7e_0
+  - conda-forge/linux-64::r-cli==3.3.0=r41h7525677_0
+  - conda-forge/linux-64::r-xml2==1.3.3=r41h7525677_1
+  - conda-forge/noarch::r-withr==2.5.0=r41hc72bb7e_0
+  - conda-forge/linux-64::r-nnet==7.3_17=r41hcfec24a_0
+  - conda-forge/noarch::r-dtplyr==1.2.1=r41hc72bb7e_0
+  - conda-forge/noarch::r-lifecycle==1.0.1=r41hc72bb7e_0
+  - conda-forge/noarch::r-dbi==1.1.2=r41hc72bb7e_0
+  - conda-forge/noarch::r-hms==1.1.1=r41hc72bb7e_0
+  - conda-forge/noarch::r-rversions==2.1.1=r41hc72bb7e_0
+  - conda-forge/linux-64::r-farver==2.1.0=r41h03ef668_0
+  - conda-forge/linux-64::r-tseries==0.10_51=r41h1463581_0
+  - conda-forge/noarch::r-devtools==2.4.3=r41hc72bb7e_0
+  - conda-forge/linux-64::r-rodbc==1.3_19=r41hcfec24a_0
+  - conda-forge/noarch::r-googlesheets4==1.0.0=r41h785f33e_0
+  - conda-forge/linux-64::r-caret==6.0_92=r41h06615bd_0
+  - conda-forge/noarch::r-assertthat==0.2.1=r41hc72bb7e_2
+  - conda-forge/noarch::r-rematch==1.0.1=r41hc72bb7e_1004
+  - conda-forge/linux-64::r-vctrs==0.4.1=r41h7525677_0
+  - conda-forge/noarch::r-labeling==0.4.2=r41hc72bb7e_1
+  - conda-forge/linux-64::r-tidyr==1.2.0=r41h03ef668_0
+  - conda-forge/linux-64::r-base64enc==0.1_3=r41hcfec24a_1004
+  - conda-forge/noarch::r-remotes==2.4.2=r41hc72bb7e_0
+  - conda-forge/linux-64::r-askpass==1.1=r41hcfec24a_2
+  - conda-forge/linux-64::r-lazyeval==0.2.2=r41hcfec24a_2
+  - conda-forge/linux-64::r-fastmap==1.1.0=r41h03ef668_0
+  - conda-forge/linux-64::r-stringi==1.7.6=r41h30a9eb7_2
+  - conda-forge/noarch::r-stringr==1.4.0=r41hc72bb7e_2
+  - conda-forge/linux-64::r-gower==1.0.0=r41hcfec24a_0
+  - conda-forge/linux-64::r-rcpparmadillo==0.11.0.0.0=r41h43535f1_0
+  - conda-forge/linux-64::r-xfun==0.31=r41h7525677_0
+  - conda-forge/noarch::r-progressr==0.10.0=r41hc72bb7e_0
+  - conda-forge/noarch::r-usethis==2.1.5=r41hc72bb7e_0
+  - conda-forge/noarch::r-rcolorbrewer==1.1_3=r41h785f33e_0
+  - conda-forge/linux-64::r-digest==0.6.29=r41h03ef668_0
+  - conda-forge/linux-64::r-bit==4.0.4=r41hcfec24a_0
+  - conda-forge/noarch::r-gtable==0.3.0=r41hc72bb7e_3
+  - conda-forge/linux-64::r-survival==3.3_1=r41h06615bd_0
+  - conda-forge/noarch::r-htmlwidgets==1.5.4=r41hc72bb7e_0
+  - conda-forge/noarch::r-dbplyr==2.1.1=r41hc72bb7e_0
+  - conda-forge/linux-64::bottleneck==1.3.4=py39hd257fcd_1
+  - conda-forge/noarch::seaborn==0.11.2=hd8ed1ab_0
+  - conda-forge/noarch::dask==2022.5.0=pyhd8ed1ab_0
+  - conda-forge/noarch::seaborn-base==0.11.2=pyhd8ed1ab_0
+  - conda-forge/noarch::ipywidgets==7.7.0=pyhd8ed1ab_0
+  - conda-forge/linux-64::matplotlib-base==3.5.2=py39h700656a_0
+  - conda-forge/linux-64::bokeh==2.4.2=py39hf3d152e_1
+  - conda-forge/noarch::jupyterlab_widgets==1.1.0=pyhd8ed1ab_0
+  - conda-forge/noarch::fsspec==2022.3.0=pyhd8ed1ab_0
+  - conda-forge/noarch::munkres==1.1.4=pyh9f0ad1d_0
+  - conda-forge/linux-64::cython==0.29.28=py39h5a03fae_2
+  - conda-forge/noarch::imageio==2.19.1=pyhcf75d05_0
+  - conda-forge/linux-64::pytables==3.7.0=py39h2669a42_0
+  - conda-forge/noarch::zict==2.2.0=pyhd8ed1ab_0
+  - conda-forge/noarch::dill==0.3.4=pyhd8ed1ab_0
+  - conda-forge/linux-64::numexpr==2.8.0=py39h194a79d_102
+  - conda-forge/linux-64::sympy==1.10.1=py39hf3d152e_0
+  - conda-forge/noarch::tblib==1.7.0=pyhd8ed1ab_0
+  - conda-forge/linux-64::numpy==1.21.6=py39h18676bf_0
+  - conda-forge/linux-64::statsmodels==0.13.2=py39hce5d2b2_0
+  - conda-forge/linux-64::protobuf==3.20.1=py39h5a03fae_0
+  - conda-forge/noarch::threadpoolctl==3.1.0=pyh8a188c0_0
+  - conda-forge/linux-64::llvmlite==0.38.0=py39h7d9a04d_1
+  - conda-forge/noarch::dask-core==2022.5.0=pyhd8ed1ab_0
+  - conda-forge/noarch::typing_extensions==4.2.0=pyha770c72_1
+  - conda-forge/noarch::partd==1.2.0=pyhd8ed1ab_0
+  - conda-forge/noarch::altair==4.2.0=pyhd8ed1ab_1
+  - conda-forge/noarch::networkx==2.8=pyhd8ed1ab_0
+  - conda-forge/linux-64::pyyaml==6.0=py39hb9d737c_4
+  - conda-forge/noarch::cached_property==1.5.2=pyha770c72_1
+  - conda-forge/linux-64::pywavelets==1.3.0=py39hd257fcd_1
+  - conda-forge/noarch::tifffile==2022.5.4=pyhd8ed1ab_0
+  - conda-forge/noarch::patsy==0.5.2=pyhd8ed1ab_0
+  - conda-forge/linux-64::h5py==3.6.0=nompi_py39h7e08c79_100
+  - conda-forge/noarch::toolz==0.11.2=pyhd8ed1ab_0
+  - conda-forge/linux-64::lz4==4.0.0=py39h029007f_1
+  - conda-forge/linux-64::unicodedata2==14.0.0=py39hb9d737c_1
+  - conda-forge/linux-64::click==8.1.3=py39hf3d152e_0
+  - conda-forge/linux-64::pandas==1.4.2=py39h1832856_1
+  - conda-forge/noarch::sortedcontainers==2.4.0=pyhd8ed1ab_0
+  - conda-forge/linux-64::widgetsnbextension==3.6.0=py39hf3d152e_0
+  - conda-forge/linux-64::numba==0.55.1=py39h66db6d7_1
+  - conda-forge/noarch::distributed==2022.5.0=pyhd8ed1ab_0
+  - conda-forge/noarch::mpmath==1.2.1=pyhd8ed1ab_0
+  - conda-forge/noarch::locket==1.0.0=pyhd8ed1ab_0
+  - conda-forge/linux-64::msgpack-python==1.0.3=py39hf939315_1
+  - conda-forge/noarch::ipympl==0.9.1=pyhd8ed1ab_0
+  - conda-forge/noarch::joblib==1.1.0=pyhd8ed1ab_0
+  - conda-forge/linux-64::kiwisolver==1.4.2=py39hf939315_1
+  - conda-forge/linux-64::pillow==9.1.0=py39hae2aec6_2
+  - conda-forge/noarch::cloudpickle==2.0.0=pyhd8ed1ab_0
+  - conda-forge/noarch::cycler==0.11.0=pyhd8ed1ab_0
+  - conda-forge/linux-64::cytoolz==0.11.2=py39hb9d737c_2
+  - conda-forge/noarch::cached-property==1.5.2=hd8ed1ab_1
+  - conda-forge/noarch::heapdict==1.0.1=py_0
+  - conda-forge/linux-64::scikit-image==0.19.2=py39hde0f152_0
+  - conda-forge/linux-64::scikit-learn==1.1.0=py39h4037b75_0
+  - conda-forge/linux-64::fonttools==4.33.3=py39hb9d737c_0
+  - conda-forge/linux-64::imagecodecs==2022.2.22=py39h9c0c3a3_4
+  - conda-forge/linux-64::gmpy2==2.1.2=py39h78fa15d_0
+  - conda-forge/linux-64::scipy==1.8.0=py39hee8e79c_1
+  - conda-forge/noarch::xlrd==2.0.1=pyhd8ed1ab_3
+[0mdone
+[91m
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.12.0
+  latest version: 4.13.0
+
+Please update conda by running
+
+    $ conda update -n base conda
+
+
+[0m
+## Package Plan ##
+
+  environment location: /opt/conda
+
+  added / updated specs:
+    - conda
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    binutils_linux-64-2.36     |      hf3e587d_10          24 KB  conda-forge
+    blosc-1.21.1               |       h83bc5f7_3          47 KB  conda-forge
+    c-blosc2-2.1.1             |       h7a311fb_2         248 KB  conda-forge
+    ca-certificates-2022.6.15  |       ha878542_0         149 KB  conda-forge
+    gcc_linux-64-10.3.0        |      hc39de41_10          25 KB  conda-forge
+    gfortran_linux-64-10.3.0   |      hb09a455_10          24 KB  conda-forge
+    gxx_linux-64-10.3.0        |      h2593f52_10          24 KB  conda-forge
+    harfbuzz-4.3.0             |       hf9f4e7c_0         2.0 MB  conda-forge
+    libarchive-3.5.2           |       hb890918_3         1.6 MB  conda-forge
+    libtiff-4.4.0              |       h0fcbabc_0         606 KB  conda-forge
+    libzlib-1.2.12             |       h166bdaf_1          63 KB  conda-forge
+    llvm-openmp-14.0.4         |       he0ac6c6_0         5.8 MB  conda-forge
+    snappy-1.1.9               |       hbd366e4_1          35 KB  conda-forge
+    zlib-1.2.12                |       h166bdaf_1          91 KB  conda-forge
+    zstd-1.5.2                 |       h8a70e8d_1         452 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        11.1 MB
+
+The following packages will be UPDATED:
+
+  binutils_linux-64                         2.36-hf3e587d_9 --> 2.36-hf3e587d_10
+  blosc                                   1.21.1-h83bc5f7_2 --> 1.21.1-h83bc5f7_3
+  c-blosc2                                 2.1.1-h7a311fb_0 --> 2.1.1-h7a311fb_2
+  ca-certificates                      2021.10.8-ha878542_0 --> 2022.6.15-ha878542_0
+  gcc_linux-64                            10.3.0-hc39de41_9 --> 10.3.0-hc39de41_10
+  gfortran_linux-64                       10.3.0-hb09a455_9 --> 10.3.0-hb09a455_10
+  gxx_linux-64                            10.3.0-h2593f52_9 --> 10.3.0-h2593f52_10
+  harfbuzz                                 4.2.1-hf9f4e7c_0 --> 4.3.0-hf9f4e7c_0
+  libarchive                               3.5.2-hccf745f_1 --> 3.5.2-hb890918_3
+  libtiff                                  4.3.0-h542a066_3 --> 4.4.0-h0fcbabc_0
+  libzlib                              1.2.11-h166bdaf_1014 --> 1.2.12-h166bdaf_1
+  llvm-openmp                             14.0.3-he0ac6c6_0 --> 14.0.4-he0ac6c6_0
+  snappy                                   1.1.9-hbd366e4_0 --> 1.1.9-hbd366e4_1
+  zlib                                 1.2.11-h166bdaf_1014 --> 1.2.12-h166bdaf_1
+  zstd                                     1.5.2-ha95c52a_0 --> 1.5.2-h8a70e8d_1
+
+
+Proceed ([y]/n)? 
+
+Downloading and Extracting Packages
+blosc-1.21.1         | 47 KB     |            |   0% blosc-1.21.1         | 47 KB     | ###3       |  34% blosc-1.21.1         | 47 KB     | ########## | 100% 
+ca-certificates-2022 | 149 KB    |            |   0% ca-certificates-2022 | 149 KB    | ########## | 100% ca-certificates-2022 | 149 KB    | ########## | 100% 
+gcc_linux-64-10.3.0  | 25 KB     |            |   0% gcc_linux-64-10.3.0  | 25 KB     | ########## | 100% 
+harfbuzz-4.3.0       | 2.0 MB    |            |   0% harfbuzz-4.3.0       | 2.0 MB    | 6          |   6% harfbuzz-4.3.0       | 2.0 MB    | #3         |  14% harfbuzz-4.3.0       | 2.0 MB    | ###3       |  33% harfbuzz-4.3.0       | 2.0 MB    | ######4    |  64% harfbuzz-4.3.0       | 2.0 MB    | ########## | 100% harfbuzz-4.3.0       | 2.0 MB    | ########## | 100% 
+llvm-openmp-14.0.4   | 5.8 MB    |            |   0% llvm-openmp-14.0.4   | 5.8 MB    | 5          |   5% llvm-openmp-14.0.4   | 5.8 MB    | #8         |  18% llvm-openmp-14.0.4   | 5.8 MB    | ##7        |  28% llvm-openmp-14.0.4   | 5.8 MB    | ###7       |  37% llvm-openmp-14.0.4   | 5.8 MB    | ####4      |  45% llvm-openmp-14.0.4   | 5.8 MB    | #####2     |  53% llvm-openmp-14.0.4   | 5.8 MB    | ######     |  61% llvm-openmp-14.0.4   | 5.8 MB    | ######9    |  69% llvm-openmp-14.0.4   | 5.8 MB    | #######8   |  78% llvm-openmp-14.0.4   | 5.8 MB    | ########7  |  87% llvm-openmp-14.0.4   | 5.8 MB    | #########6 |  96% llvm-openmp-14.0.4   | 5.8 MB    | ########## | 100% 
+snappy-1.1.9         | 35 KB     |            |   0% snappy-1.1.9         | 35 KB     | ########## | 100% 
+gxx_linux-64-10.3.0  | 24 KB     |            |   0% gxx_linux-64-10.3.0  | 24 KB     | ########## | 100% 
+libtiff-4.4.0        | 606 KB    |            |   0% libtiff-4.4.0        | 606 KB    | ##6        |  26% libtiff-4.4.0        | 606 KB    | ########## | 100% libtiff-4.4.0        | 606 KB    | ########## | 100% 
+c-blosc2-2.1.1       | 248 KB    |            |   0% c-blosc2-2.1.1       | 248 KB    | ########## | 100% c-blosc2-2.1.1       | 248 KB    | ########## | 100% 
+gfortran_linux-64-10 | 24 KB     |            |   0% gfortran_linux-64-10 | 24 KB     | ########## | 100% 
+libarchive-3.5.2     | 1.6 MB    |            |   0% libarchive-3.5.2     | 1.6 MB    | ##2        |  22% libarchive-3.5.2     | 1.6 MB    | #####6     |  57% libarchive-3.5.2     | 1.6 MB    | #########2 |  93% libarchive-3.5.2     | 1.6 MB    | ########## | 100% 
+libzlib-1.2.12       | 63 KB     |            |   0% libzlib-1.2.12       | 63 KB     | ########## | 100% libzlib-1.2.12       | 63 KB     | ########## | 100% 
+binutils_linux-64-2. | 24 KB     |            |   0% binutils_linux-64-2. | 24 KB     | ########## | 100% 
+zstd-1.5.2           | 452 KB    |            |   0% zstd-1.5.2           | 452 KB    | ######7    |  67% zstd-1.5.2           | 452 KB    | ########## | 100% 
+zlib-1.2.12          | 91 KB     |            |   0% zlib-1.2.12          | 91 KB     | ########## | 100% 
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+Removing intermediate container 1960ad252cfe
+ ---> 0fbeac581a63
+Step 7/7 : RUN conda create -n rapids-22.04 -c rapidsai -c nvidia -c conda-forge     cuml=22.04 python=3.9 cudatookit=11.5
+ ---> Running in 093138df2f6a
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... failed with repodata from current_repodata.json, will retry with next repodata source.
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... failed
+[91m
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - cudatookit=11.5
+
+Current channels:
+
+  - https://conda.anaconda.org/rapidsai/linux-64
+  - https://conda.anaconda.org/rapidsai/noarch
+  - https://conda.anaconda.org/nvidia/linux-64
+  - https://conda.anaconda.org/nvidia/noarch
+  - https://conda.anaconda.org/conda-forge/linux-64
+  - https://conda.anaconda.org/conda-forge/noarch
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+[0m
